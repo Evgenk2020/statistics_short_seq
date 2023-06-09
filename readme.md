@@ -2,7 +2,7 @@
 
 Utility for short sequence of numbers statistical estimation
 
-Run the utility with specified keys
+Run it with specified keys
 
 ```
 
