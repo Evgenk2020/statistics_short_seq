@@ -92,7 +92,14 @@ void data_run(std::vector<float> *put_data)
 {
     statistics stat(*put_data);
 
-    std::cout << "Число элементов: " << stat.number << std::endl;
+    std::cout << "Последовательность: ";
+    for (auto data : stat.data)
+    {
+        std::cout << data << ' ';
+    }
+    std::cout << std::endl;
+
+    std::cout << "Число элементов: " << stat.data.size() << std::endl;
     std::cout << "Сумма чисел: " << stat.sum << std::endl;
     std::cout << "Среднее арифметическое: " << stat.average << std::endl;
     std::cout << "Среднее квадратическое: " << stat.root_mean_square << std::endl;

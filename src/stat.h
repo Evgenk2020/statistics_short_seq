@@ -5,15 +5,15 @@
 
 struct statistics
 {
-    float sum;
     float average;
-    float root_mean_square;
+    float sum;
     float dispersion;
+    float root_mean_square;
     float deviation;
     float variation_co;
     float mean_error;
     float relative_mean_error;
-    int number;
+    std::vector<float> data;
 
     statistics(std::vector<float> inp_data);
 };
