@@ -6,6 +6,6 @@ Run it with specified keys
 
 ```
 
-onerow -d [first number] [second number] ... [... number]
+onerow -d [first_number] [second_number] ... [number]
 
 ```
