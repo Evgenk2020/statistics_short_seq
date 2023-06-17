@@ -10,7 +10,7 @@ SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_BUILD_RPATH}/bin)
 
 project(onerow LANGUAGES CXX)
 
-add_library(stat STATIC stat.h stat.cpp)
+add_library(stat STATIC stat.h stat.cpp output.h output.cpp)
 
 add_executable(onerow main.cpp)
 target_link_libraries(onerow stat)
