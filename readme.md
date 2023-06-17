@@ -40,3 +40,35 @@ onerow -d 23.1 18.6 19 20 20 24 19.5
 exec $SHELL
 
 ```
+
+or for writing `chlor-dada.csv` use
+
+```SH
+
+#!/bin/bash
+
+onerow -df 1 2 3 4 5
+onerow -df 1.1 2.4 -3 4.9 -5.3
+onerow -df 0 0 3 4 5
+onerow -df 1 2 3 0 0
+onerow -df 23.1 18.6 19 20 20 24 19.5
+
+exec $SHELL
+
+```
+
+This program runs with `uk_UA.utf8` locale. It can be changed in `output.cpp`
+
+```C++
+
+std::locale m_loc("uk_UA.utf8");
+
+```
+
+To see locale list use
+
+```SH
+
+locale -a
+
+```
