@@ -49,7 +49,7 @@ data_info::~data_info() {}
 void screen_info::see_info(statistics *stat)
 {
 
-    std::cout << "Последовательность:";
+    std::cout << "Последовательность: ";
     for (auto data : stat->data)
     {
         std::cout << data << ' ';
@@ -94,7 +94,7 @@ void file_info::see_info(statistics *stat)
     writer << "Относительная ошибка средней величины:" << coma << quo << stat->relative_mean_error << quo << std::endl;
     writer << "" << std::endl;
 
-    std::cout << "Данные добавлены в файл chlor-dada.csv" << std::endl;
+    std::cout << "Данные добавлены в файл one-rstat.csv" << std::endl;
 }
 
 //--------------------------------------------------
