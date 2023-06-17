@@ -49,7 +49,7 @@ data_info::~data_info() {}
 void screen_info::see_info(statistics *stat)
 {
 
-    std::cout << "Последовательность: ";
+    std::cout << "Последовательность:";
     for (auto data : stat->data)
     {
         std::cout << data << ' ';
