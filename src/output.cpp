@@ -6,40 +6,40 @@ general_info::~general_info() {}
 
 void help_info::see_info()
 {
-    std::cout << "*** Статистическая обработка ряда чисел ***" << std::endl
+    std::cout << "*** Статистична обробка послідовного ряду ***" << std::endl
               << std::endl
-              << "Для вывода в терминал" << std::endl
-              << "onerow -d [первое число] [второе число] ... [... число]" << std::endl
-              << "Для вывода в файл" << std::endl
-              << "onerow -df [первое число] [второе число] ... [... число]" << std::endl
-              << "Для вывода справки" << std::endl
+              << "Для виводу в термінал" << std::endl
+              << "onerow -d [перше_число] [друге_число] ... [наступне_число]" << std::endl
+              << "Для виводу в файл" << std::endl
+              << "onerow -df [перше_число] [друге_число] ... [наступне_число]" << std::endl
+              << "Для довідки" << std::endl
               << "onerow [-h|--help]" << std::endl
-              << "Для просмотра дополнительной информации" << std::endl
+              << "Для додаткової інформації" << std::endl
               << "onerow -i" << std::endl;
 }
 
 void inf_indo::see_info()
 {
-    std::cout << "Утилита позволяет определять показатели первичных статистических данных:" << std::endl
+    std::cout << "Утиліта визначає показники первинних статистичних даних:" << std::endl
               << std::endl
-              << "- Среднее арифметическое - число, равное сумме всех чисел множества, деленной на их количество" << std::endl
-              << "  Является одной из мер центральной тенденции" << std::endl
+              << "- Середнє арифметичне - число, що дорівнює сумі всіх чисел послідовності, поділеної на їх кількість" << std::endl
+              << "  Є однією з мір центральної тенденції" << std::endl
               << std::endl
-              << "- Среднее квадратическое - число, равное квадратному корню из среднего арифметического" << std::endl
-              << "  квадратов данных чисел" << std::endl
+              << "- Середнє квадратичне - число, що дорівнює квадратному кореню з середнього арифметичного" << std::endl
+              << "  квадратів чисел послідовності" << std::endl
               << std::endl
-              << "- Дисперсия случайной величины - мера разброса значений случайной величины" << std::endl
-              << "  относительно ее математического ожидания" << std::endl
+              << "- Дисперсія випадкової величини - міра розподілу значень випадкової величини" << std::endl
+              << "  відносно її математичного очікування" << std::endl
               << std::endl
-              << "- Среднеквадратическое отклонение - наиболее распространенный показатель рассеивания," << std::endl
-              << "  равен квадратному корню из дисперсии. Среднеквадратическое отклонение можно считать мерой неопределенности" << std::endl
+              << "- Середнє квадратичне відхилення - найбільш поширений показник розсіювання," << std::endl
+              << "  дорівнює квадратному кореню з дисперсії. Середнє квадратичне відхилення можна вважати мірою невизначеності" << std::endl
               << std::endl
-              << "- Коэффициент вариации - это мера относительного разброса случайной величины" << std::endl
+              << "- Коефіцієнт варіації - це міра відносного розподілу випадкової величиин" << std::endl
               << std::endl
-              << "- Стандартная ошибка среднего - величина, характеризующая стандартное отклонение" << std::endl
-              << "  выборочного среднего, рассчитанное по выборке размера n из генеральной совокупности" << std::endl
+              << "- Стандартна похибка середнього - величина, яка характеризує стандартне відхилення" << std::endl
+              << "  вибіркового середнього, розрахована по виборці n із генеральної сукупності (+-)" << std::endl
               << std::endl
-              << "- Относительная ошибка средней величины - стандартная ошибка среднего" << std::endl;
+              << "- Відносна похибка середньої величини - стандартна похибка середньої" << std::endl;
 }
 
 //--------------------------------------------------
@@ -49,22 +49,22 @@ data_info::~data_info() {}
 void screen_info::see_info(statistics *stat)
 {
 
-    std::cout << "Последовательность: ";
+    std::cout << "Послідовність: ";
     for (auto data : stat->data)
     {
         std::cout << data << ' ';
     }
     std::cout << std::endl;
 
-    std::cout << "Число элементов: " << stat->data.size() << std::endl;
-    std::cout << "Сумма чисел: " << stat->sum << std::endl;
-    std::cout << "Среднее арифметическое: " << stat->average << std::endl;
-    std::cout << "Среднее квадратическое: " << stat->root_mean_square << std::endl;
-    std::cout << "Дисперсия: " << stat->dispersion << std::endl;
-    std::cout << "Стандартное отклонение: " << stat->deviation << std::endl;
-    std::cout << "Коэффициент вариации: " << stat->variation_co << std::endl;
-    std::cout << "Ошибка средней величины: " << stat->mean_error << std::endl;
-    std::cout << "Относительная ошибка средней величины: " << stat->relative_mean_error << std::endl;
+    std::cout << "Число елементів: " << stat->data.size() << std::endl;
+    std::cout << "Сума чисел: " << stat->sum << std::endl;
+    std::cout << "Середнє арифметичне: " << stat->average << std::endl;
+    std::cout << "Середнє квадратичне: " << stat->root_mean_square << std::endl;
+    std::cout << "Дисперсія: " << stat->dispersion << std::endl;
+    std::cout << "Стандартне відхилення: " << stat->deviation << std::endl;
+    std::cout << "Коефіцієнт варіації: " << stat->variation_co << std::endl;
+    std::cout << "Похибка середньої величини: " << stat->mean_error << std::endl;
+    std::cout << "Відносна похибка середньої величини: " << stat->relative_mean_error << std::endl;
 }
 
 void file_info::see_info(statistics *stat)
@@ -76,25 +76,25 @@ void file_info::see_info(statistics *stat)
     std::locale m_loc("uk_UA.utf8");
     writer.imbue(m_loc);
 
-    writer << "Последовательность: " << coma;
+    writer << "Послідовність: " << coma;
     for (auto data : stat->data)
     {
         writer << quo << data << quo << coma;
     }
     writer << std::endl;
 
-    writer << "Число элементов:" << coma << quo << stat->data.size() << quo << std::endl;
-    writer << "Сумма чисел: " << coma << quo << stat->sum << quo << std::endl;
-    writer << "Среднее арифметическое:" << coma << quo << stat->average << quo << std::endl;
-    writer << "Среднее квадратическое: " << coma << quo << stat->root_mean_square << quo << std::endl;
-    writer << "Дисперсия:" << coma << quo << stat->dispersion << quo << std::endl;
-    writer << "Стандартное отклонение:" << coma << quo << stat->deviation << quo << std::endl;
-    writer << "Коэффициент вариации:" << coma << quo << stat->variation_co << quo << std::endl;
-    writer << "Ошибка средней величины:" << coma << quo << stat->mean_error << quo << std::endl;
-    writer << "Относительная ошибка средней величины:" << coma << quo << stat->relative_mean_error << quo << std::endl;
+    writer << "Число елементів:" << coma << quo << stat->data.size() << quo << std::endl;
+    writer << "Сума чисел: " << coma << quo << stat->sum << quo << std::endl;
+    writer << "Середнє арифметичне:" << coma << quo << stat->average << quo << std::endl;
+    writer << "Середнє квадратичне: " << coma << quo << stat->root_mean_square << quo << std::endl;
+    writer << "Дисперсія:" << coma << quo << stat->dispersion << quo << std::endl;
+    writer << "Стандартне відхилення:" << coma << quo << stat->deviation << quo << std::endl;
+    writer << "Коефіцієнт варіації:" << coma << quo << stat->variation_co << quo << std::endl;
+    writer << "Похибка середньої величини:" << coma << quo << stat->mean_error << quo << std::endl;
+    writer << "Відносна похибка середньої величини:" << coma << quo << stat->relative_mean_error << quo << std::endl;
     writer << "" << std::endl;
 
-    std::cout << "Данные добавлены в файл one-rstat.csv" << std::endl;
+    std::cout << "Дані додані у файл one-rstat.csv" << std::endl;
 }
 
 //--------------------------------------------------
