@@ -70,7 +70,7 @@ void screen_info::see_info(statistics *stat)
 void file_info::see_info(statistics *stat)
 {
     std::ofstream writer("one-rstat.csv", std::ios::app);
-    const std::string coma = ",";
+    const char coma = ',';
     const char quo = '\"';
 
     std::locale m_loc("uk_UA.utf8");
